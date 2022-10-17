@@ -1,32 +1,34 @@
 <template>
-<span>
-  <span :class="[{ active: isActive, inactive: !isActive }, 'button']">Ejemplo de div</span>
-  <span :class="[classObject, 'button']">Ejemplo de div</span>
-</span>
+  <span>
+    <span :class="[{ active: isActive, inactive: !isActive }, 'button']"
+      >Ejemplo de div</span
+    >
+    <span :class="[classObject, 'button']">Ejemplo de div</span>
+  </span>
 </template>
 
 <script>
 export default {
-  name: 'Button',
+  name: "Button",
   props: {
-    active: Boolean
+    active: Boolean,
   },
   computed: {
-    isActive: function() {
-      return this.active
+    isActive: function () {
+      return this.active;
     },
     classObject() {
       return {
-        isActive: true
-      }
-    }
-  }
-}
+        isActive: true,
+      };
+    },
+  },
+};
 </script>
 
 <style>
 .active {
-  background-color: green
+  background-color: green;
 }
 .inactive {
   background-color: brown;
@@ -35,11 +37,11 @@ export default {
   padding: 15px;
 }
 
-.button:hover  {
+.button:hover {
   background-color: lightblue;
 }
 
-.button:active  {
+.button:active {
   background-color: blueviolet;
 }
 </style>

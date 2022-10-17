@@ -1,30 +1,29 @@
-'use strict'
+"use strict";
 
-var x = 10
-var test = 5
+var x = 10;
+var test = 5;
 
-console.log('valor de x ' + x)
+console.log("valor de x " + x);
 
 function shadow() {
-    var x = 20
+  var x = 20;
 
-    console.log('valor de x ' + x)
-    console.log('valor de test ' + test)
+  console.log("valor de x " + x);
+  console.log("valor de test " + test);
 }
 
-shadow()
-console.log('valor de x ' + x)
-
+shadow();
+console.log("valor de x " + x);
 
 function scopes() {
-    var i = 0;
+  var i = 0;
 
-    for (let j = 0; j<10; j++) {
-        var i = j;
-        console.log('i ' + i)
-    }
+  for (let j = 0; j < 10; j++) {
+    var i = j;
+    console.log("i " + i);
+  }
 
-    console.log(i)
+  console.log(i);
 }
 
-scopes()
+scopes();

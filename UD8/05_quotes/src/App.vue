@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <Quote></Quote>
   </div>
 </template>
@@ -9,11 +9,11 @@
 import Quote from "./components/Quote.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Quote
-}
-}
+    Quote,
+  },
+};
 </script>
 
 <style>

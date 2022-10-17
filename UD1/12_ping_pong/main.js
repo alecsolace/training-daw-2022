@@ -1,8 +1,6 @@
-function pingPong() {
+function pingPong() {}
 
-}
-
-pingPong()
+pingPong();
 // expected output
 // 1
 // 2

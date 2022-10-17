@@ -1,3 +1,3 @@
-x = 10
+x = 10;
 
-console.log('el valor de X ' + x)
+console.log("el valor de X " + x);

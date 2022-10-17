@@ -1,35 +1,35 @@
 <template>
-<div>
-  <span>{{quote.name}}</span>
-  <span>{{quote.value}}</span>
-  <span :class="classObject">{{quote.change}}</span>
-  <span :class="classObject">{{percentChange}}</span>
-</div>
+  <div>
+    <span>{{ quote.name }}</span>
+    <span>{{ quote.value }}</span>
+    <span :class="classObject">{{ quote.change }}</span>
+    <span :class="classObject">{{ percentChange }}</span>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Stock',
+  name: "Stock",
   props: {
-    quote: Object
+    quote: Object,
   },
   computed: {
-    percentChange: function() {
-      return Math.round(this.quote.change / this.quote.value * 10000) / 100
+    percentChange: function () {
+      return Math.round((this.quote.change / this.quote.value) * 10000) / 100;
     },
     classObject() {
       return {
         green: this.quote.change > 0,
         red: this.quote.change < 0,
-      }
-    }
-  }
-}
+      };
+    },
+  },
+};
 </script>
 
 <style>
 .green {
-  color: green
+  color: green;
 }
 .red {
   color: red;

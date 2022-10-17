@@ -1,7 +1,6 @@
-const assert = require('assert').strict;
+const assert = require("assert").strict;
 
-function nextPairs(value) {
-}
+function nextPairs(value) {}
 
-assert.deepStrictEqual(nextPairs(3), [2,4])
-assert.deepStrictEqual(nextPairs(4), [2,6])
+assert.deepStrictEqual(nextPairs(3), [2, 4]);
+assert.deepStrictEqual(nextPairs(4), [2, 6]);

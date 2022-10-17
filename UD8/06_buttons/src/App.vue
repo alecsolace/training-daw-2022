@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <Button :active="true" />
     <Button :active="false" />
   </div>
 </template>
 
 <script>
-import Button from './components/Button.vue'
+import Button from "./components/Button.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Button
-}
-}
+    Button,
+  },
+};
 </script>
 
 <style>
