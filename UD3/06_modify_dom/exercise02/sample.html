@@ -5,10 +5,36 @@
     <title>DOM básico</title>
     <script type="text/javascript">
       window.onload = function () {
+        let enlaces = document.getElementsByTagName("a");
         // Numero de enlaces de la pagina
+        console.log(`Enlaces en la página: ${enlaces.length}`);
         // Direccion del penultimo enlace
+        console.log(
+          `Dirección del penultimo enlace: ${enlaces[enlaces.length - 2].href}`
+        );
         // Numero de enlaces que apuntan a http://prueba
+
+        let i = 0;
+        for (let index = 0; index < enlaces.length; index++) {
+          if (enlaces[index].href === "http://prueba/") {
+            i++;
+          }
+        }
+        console.log(`existen ${i} parrafos que apunten a http://prueba`);
         // Numero de enlaces del tercer párrafo
+        let thirdParr = document.getElementsByTagName("p")[2];
+        console.log(
+          "El tercer parrafo contiene: " +
+            thirdParr.getElementsByTagName("a").length +
+            " enlaces"
+        );
+        //Crear un nodo <div>, con un nodo <p> dentro y añadirlo al document
+        let aDiv = document.createElement("div");
+        let aParr = document.createElement("p");
+        aParr.innerText = "Un texto desde JS";
+        aDiv.classList = "ejemplo";
+        aDiv.appendChild(aParr);
+        thirdParr.appendChild(aDiv);
       };
     </script>
   </head>
